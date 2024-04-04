@@ -8,3 +8,9 @@ body {
 main {
     flex-grow: 1;
 }
+
+
+.img{
+    width: 200px;
+    
+}
