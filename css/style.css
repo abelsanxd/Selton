@@ -1,10 +1,21 @@
-
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
+}
+
+/* Slider Index */
+
+.texto-juegos-slider {
+  top: 30%;
+  right: 15%;
+}
+
+.texto-juegos-slider-persona {
+  top: 30%;
+  left: 15%;
 }
