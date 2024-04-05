@@ -18,7 +18,7 @@ main {
     padding: 0;
 }
 
-.card {
+.card-customLogin {
     background-color:rgba(255, 255, 255, 0.15);
     border-radius: 10px;
     padding: 20px;
