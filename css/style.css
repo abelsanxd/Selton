@@ -12,10 +12,40 @@ main {
 
 .texto-juegos-slider {
   top: 30%;
-  right: 15%;
+  right: 10%;
 }
 
 .texto-juegos-slider-persona {
   top: 30%;
-  left: 15%;
+  left: 17%;
+}
+
+.flecha-de {
+  right: -66px;
+}
+
+.flecha-iz {
+  left: -66px;
+}
+
+.flecha-de,
+.flecha-iz {
+  background-color: rgb(194, 194, 194);
+  width: 5%;
+  height: 50%;
+  top: 25%;
+}
+
+.numero-juegos-carousel {
+  bottom: -39px;
+  background-color: rgb(206, 206, 206);
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .flecha-de,
+  .flecha-iz,
+  .texto-juegos-slider,
+  .texto-juegos-slider-persona {
+    display: none;
+  }
 }
