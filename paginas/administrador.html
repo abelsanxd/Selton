@@ -52,7 +52,7 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                Category
+                  Category
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Acction</a></li>
@@ -70,7 +70,10 @@
                 <a class="nav-link active" href="./administrador.html">Admin</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../paginas/entrar.html"
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../paginas/entrar.html"
                   >Login <i class="bi bi-person-circle"></i
                 ></a>
               </li>
@@ -91,45 +94,129 @@
       </nav>
     </header>
     <main class="container my-5">
-        <h1 class="display-4 text-center"> Administrar Juegos </h1>
-        <hr />
-        <section class="d-flex align-items-center">
-          <button
-            class="btn btn-outline-success btn-sm ms-3"
-            id="btnCrearPelicula"
-            fs-4
+      <h1 class="display-4 text-center">Administrar Juegos</h1>
+      <hr />
+      <section class="d-flex align-items-center">
+        <button
+          type="button"
+          class="btn btn-outline-success btn-sm ms-3"
+          data-bs-toggle="modal"
+          data-bs-target="#modalAgregar"
+        >
+          <i class="bi bi-clipboard2-plus-fill fs-4"></i>
+        </button>
+
+        <p class="mb-0 ps-2">Agregar</p>
+
+        <section>
+          <div
+            class="modal fade"
+            id="modalAgregar"
+            tabindex="-1"
+            aria-labelledby="modalAgregarLabel"
+            aria-hidden="true"
           >
-            <i class="bi bi-clipboard2-plus-fill fs-4"></i>
-          </button>
-          <p class="mb-0 ps-2 ">Agregar</p>
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalAgregarLabel">
+                    Agregar Juego
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form id="formAgregar">
+                    <div class="mb-3">
+                      <label for="identificador" class="form-label">#Id</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="identificador"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="titulo" class="form-label">Título</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="titulo"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="descripcion" class="form-label"
+                        >Descripción</label
+                      >
+                      <textarea
+                        class="form-control"
+                        id="descripcion"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="imagen" class="form-label">Imagen</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="imagen"
+                        required
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Agregar
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-        <section class="mt-5">
-          <hr />
-          <article class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">#Idn</th>
-                  <th scope="col">Titulo</th>
-                  <th scope="col">Descripción</th>
-                  <th scope="col">Imagen</th>
-                  <th scope="col">Acciones</th>
-                </tr>
-              </thead>
-              <tbody id=""></tbody>
-            </table>
-          </article>
-        </section>
-      </main>
+      </section>
+      <section class="mt-5">
+        <hr />
+        <article class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#Idn</th>
+                <th scope="col">Titulo</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody id="">
+              <tr>
+                <td>1</td>
+                <td>Titulo del Juego 1</td>
+                <td>Descripción del Juego 1</td>
+                <td>URL de la Imagen del Juego 1</td>
+                <td>
+                  <button type="button" class="btn btn-primary m-2">
+                    Editar
+                  </button>
+                  <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
     <footer class="bg-light text-secondary py-4">
       <div class="container">
         <div class="row">
           <div class="col-lg-4 text-center text-lg-start mb-3">
-            <img
-              width="90px"
-              src=""
-              alt=""
-            />
+            <img width="90px" src="" alt="" />
           </div>
           <div class="col-md-6 col-lg-4">
             <h4>Horarios de atención</h4>
