@@ -38,9 +38,9 @@ function agregandoJuego() {
   guardarLocalStorage();
   limpiarFormulario();
   Swal.fire({
-    title: `Pelicula creada!`,
+    title: `Juego agregado!`,
 
-    text: `La pelicula '${juegoNuevo.titulo}' fue creada correctamente`,
+    text: `El Juego '${juegoNuevo.titulo}' fue agregado correctamente`,
 
     icon: "success",
   });
