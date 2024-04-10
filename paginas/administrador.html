@@ -102,6 +102,7 @@
           class="btn btn-outline-success btn-sm ms-3"
           data-bs-toggle="modal"
           data-bs-target="#modalAgregar"
+          id="botonAgregarJuego"
         >
           <i class="bi bi-clipboard2-plus-fill fs-4"></i>
         </button>
@@ -130,14 +131,15 @@
                   ></button>
                 </div>
                 <div class="modal-body">
-                  <form id="formAgregar">
+                  <form id="formAgregar" autocomplete="off">
                     <div class="mb-3">
                       <label for="identificador" class="form-label">#Id</label>
                       <input
                         type="text"
                         class="form-control"
                         id="identificador"
-                        required
+                        placeholder="123"
+                        disabled
                       />
                     </div>
                     <div class="mb-3">
@@ -206,7 +208,6 @@
                   <button type="button" class="btn btn-danger">Eliminar</button>
                 </td>
               </tr>
-              
             </tbody>
           </table>
         </article>
@@ -248,4 +249,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+  <script src="/js/administrador.js" type="module"></script>
 </html>
