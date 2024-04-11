@@ -50,19 +50,4 @@ main {
   }
 }
 
-#bodyBglogin {
-    background-image: url('../img/bgLoginTwo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
 
-.card-customLogin {
-    background-color:rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20vh;
-    color: rgb(0 0 0 / 67%);
-}
