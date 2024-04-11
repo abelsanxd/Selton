@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +27,7 @@
     />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/stylecontacto.css">
     <title>Selton</title>
   </head>
   <body>
@@ -116,26 +117,24 @@
               <input
                 type="text"
                 class="form-control"
-                id="nombreApellido"
-                placeholder="Escribí aqui tu nombre y apellido"
-                minlength="5"
-                maxlength="50"
-                required
+                id="username"
+                placeholder="Pedro Juarez"
               />
-      
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small>Error message</small>
             </div>
 
             <div class="mb-3">
-              <label for="email" class="form-label">E-mail: *</label>
+              <label for="email" class="form-label">E-mail:</label>
               <input
                 type="email"
                 class="form-control"
                 id="email"
-                placeholder="correo@dominio.com" id="email"
-                minlength="10"
-                maxlength="320"
-                required
-              />  
+                placeholder="cristian@email.com" id="email"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
 
             <div class="mb-3">
@@ -145,10 +144,10 @@
                 class="form-control"
                 id="telefono"
                 placeholder="Ej: 3816554433" id="telefono"
-                minlength="7"
-                maxlength="10"
-                required
               />
+              <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
             </div>
             <div class="mb-3">
               <label for="consulta" class="form-label">Consulta *</label>
@@ -217,5 +216,5 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"
   ></script>
-  <script src="../js/helpe"></script>
+  <script src="../js/helpers/formularioContacto.js"></script>
 </html>
