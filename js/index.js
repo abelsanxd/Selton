@@ -7,26 +7,24 @@ if (juegos) {
   const article = document.getElementById("card");
 
   juegos.forEach((juego) => {
-    article.innerHTML += `<article class="">
-    <div class=" ">
-    <div class="col-lg-2 col-md-4">
-      <div class="card">
+    article.innerHTML += `<article class="col-6 row  ">
+    <div class="col-12 col-md-12 col-lg-12 m-2">
+      <div class="card h-100 ">
         <img
           src="${juego.imagen}"
-          class="card-img-top"
+          class="card-img-top "
           alt="${juego.titulo}"
         />
-        <div class="card-body">
-          <h5 class="card-title">${juego.titulo}</h5>
+        <div class="card-body ">
+          <h5 class="card-title tamanioTitulo">${juego.titulo}</h5>
           <a
             href="./paginas/detalle.html"
-            class="btn btn-primary"
+            class="btn btn-primary botonCardIndex "
             >Ver detalles</a
           >
         </div>
       </div>
     </div>
-  </div>
   </article>`;
   });
 }
