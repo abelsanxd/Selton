@@ -2,6 +2,8 @@ const form = document.getElementById('form');
 const usuario = document.getElementById('username');
 const email = document.getElementById('email');
 const telefono = document.getElementById('telefono');
+const consulta = document.getElementById ('consulta')
+
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
@@ -14,9 +16,10 @@ function checkInputs() {
 	const usuarioValue = usuario.value.trim();
 	const emailValue = email.value.trim();
 	const telefonoValue = telefono.value.trim();
+	const consultaValue = consulta.value.trim();
 	
 	if(usuarioValue === '') {
-		setErrorFor(usuario, 'No puede dejar el usuairo en blanco');
+		setErrorFor(usuario, 'No puede dejar el usuario en blanco');
 	} else {
 		setSuccessFor(usuario);
 	}
@@ -30,9 +33,14 @@ function checkInputs() {
 	}
 	
 	if(telefonoValue === '') {
-		setErrorFor(telefonoValue, 'Password no debe ingresar en blanco.');
+		setErrorFor(telefonoValue, 'Telefono no debe ingresar en blanco.');
 	} else {
 		setSuccessFor(telefono);
+	}
+	if(consultaValue === '') {
+		setErrorFor(consultaValue, 'Consulta no debe ingresar en blanco.');
+	} else {
+		setSuccessFor(consulta);
 	}
 	
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -116,12 +116,14 @@
               <input
                 type="text"
                 class="form-control"
-                id="nombreApellido"
+                id="username"
                 placeholder="Escribí aqui tu nombre y apellido"
                 minlength="5"
                 maxlength="50"
-                required
+                
               />
+              <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
       
             </div>
 
@@ -134,8 +136,10 @@
                 placeholder="correo@dominio.com" id="email"
                 minlength="10"
                 maxlength="320"
-                required
-              />  
+                
+              />
+              <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
             </div>
 
             <div class="mb-3">
@@ -147,8 +151,10 @@
                 placeholder="Ej: 3816554433" id="telefono"
                 minlength="7"
                 maxlength="10"
-                required
+                
               />
+              <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
             </div>
             <div class="mb-3">
               <label for="consulta" class="form-label">Consulta *</label>
@@ -157,7 +163,6 @@
                 id="consulta"
                 rows="3"
                 placeholder="Escribí aquí tu consulta"
-                required
                 minlength="5"
                 maxlength="250"
               ></textarea>
@@ -217,5 +222,5 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"
   ></script>
-  <script src="../js/helpe"></script>
+  <script src="../js/helpers/formularioContacto.js"></script>
 </html>
