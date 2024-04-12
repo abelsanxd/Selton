@@ -9,3 +9,12 @@ form.addEventListener('submit', e => {
     
     checkInputs();
 });
+
+function checkInputs() {
+    // trim para remover los espacios del inicio
+    const usuarioValue = usuario.value.trim();
+    const emailValue = email.value.trim();
+    const telefonoValue = telefono.value.trim();
+    const consultaValue = consulta.value.trim();
+
+}
