@@ -109,7 +109,37 @@ window.prepararEditarJuego = function(identificador) {
   document.querySelector("#imagen").value = juegoBuscado.imagen;
 };
 
+function editarJuego() {
+  const identificador = document.querySelector("#identificador").value;
 
+  // Buscar la posición del juego en el arreglo
+  const posicionJuego = juegos.findIndex((juego) => juego.identificador === identificador);
+
+  // Editar los valores del juego dentro del arreglo
+  juegos[posicionJuego].titulo = document.querySelector("#titulo").value;
+  juegos[posicionJuego].descripcion = document.querySelector("#descripcion").value;
+  juegos[posicionJuego].imagen = document.querySelector("#imagen").value;
+
+  // Actualizar el local storage
+  guardarLocalStorage();
+
+  // Actualizar la fila en la tabla
+  const tbody = document.querySelector("#tablajuegos");
+  const row = tbody.children[posicionJuego];
+  row.children[1].textContent = juegos[posicionJuego].titulo;
+  row.children[2].textContent = juegos[posicionJuego].descripcion;
+
+  // Mostrar un mensaje al usuario
+  Swal.fire(
+    "Juego modificado",
+    "El juego fue modificado exitosamente",
+    "success"
+  );
+
+  // Limpiar el formulario y cerrar el modal
+  limpiarFormulario();
+  modalJuego.hide();
+}
 
 
 botonAgregarJuego.addEventListener("click", mostrarModalJuego);
