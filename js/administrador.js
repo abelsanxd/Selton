@@ -102,7 +102,6 @@ window.prepararEditarJuego = function(identificador) {
   mostrarModalJuego();
   crearJuego = false;
   const juegoBuscado = juegos.find((juego) => juego.identificador === identificador);
-  // Cargar los datos en el formulario
   document.querySelector("#identificador").value = juegoBuscado.identificador;
   document.querySelector("#titulo").value = juegoBuscado.titulo;
   document.querySelector("#descripcion").value = juegoBuscado.descripcion;
@@ -112,31 +111,25 @@ window.prepararEditarJuego = function(identificador) {
 function editarJuego() {
   const identificador = document.querySelector("#identificador").value;
 
-  // Buscar la posición del juego en el arreglo
   const posicionJuego = juegos.findIndex((juego) => juego.identificador === identificador);
 
-  // Editar los valores del juego dentro del arreglo
   juegos[posicionJuego].titulo = document.querySelector("#titulo").value;
   juegos[posicionJuego].descripcion = document.querySelector("#descripcion").value;
   juegos[posicionJuego].imagen = document.querySelector("#imagen").value;
 
-  // Actualizar el local storage
   guardarLocalStorage();
 
-  // Actualizar la fila en la tabla
   const tbody = document.querySelector("#tablajuegos");
   const row = tbody.children[posicionJuego];
   row.children[1].textContent = juegos[posicionJuego].titulo;
   row.children[2].textContent = juegos[posicionJuego].descripcion;
 
-  // Mostrar un mensaje al usuario
   Swal.fire(
     "Juego modificado",
     "El juego fue modificado exitosamente",
     "success"
   );
 
-  // Limpiar el formulario y cerrar el modal
   limpiarFormulario();
   modalJuego.hide();
 }
