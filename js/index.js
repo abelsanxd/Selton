@@ -7,7 +7,7 @@ if (juegos) {
   const article = document.getElementById("card");
 
   juegos.forEach((juego) => {
-    article.innerHTML += `<article class="col-6 row  ">
+    article.innerHTML += `<article class="col-lg-4 col-md-4 row  ">
     <div class="col-12 col-md-12 col-lg-12 m-2">
       <div class="card h-100 ">
         <img
