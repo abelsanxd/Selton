@@ -111,7 +111,7 @@
 
         <section>
           <div
-            class="modal fade"
+            class="modal fade "
             id="modalAgregar"
             tabindex="-1"
             aria-labelledby="modalAgregarLabel"
@@ -132,8 +132,8 @@
                 </div>
                 <div class="modal-body">
                   <form id="formAgregar" autocomplete="off">
-                    <div class="mb-3">
-                      <label for="identificador" class="form-label">#Id</label>
+                    <div class="mb-3 ">
+                      <label for="identificador" class="form-label ">#Id</label>
                       <input
                         type="text"
                         class="form-control"
@@ -142,8 +142,8 @@
                         disabled
                       />
                     </div>
-                    <div class="mb-3">
-                      <label for="titulo" class="form-label">Título</label>
+                    <div class="mb-3" >
+                      <label for="titulo" class="form-label ">Título</label>
                       <input
                         type="text"
                         class="form-control"
@@ -151,7 +151,7 @@
                         required
                       />
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 ">
                       <label for="descripcion" class="form-label"
                         >Descripción</label
                       >
@@ -160,13 +160,15 @@
                         id="descripcion"
                         rows="3"
                         required
+                        maxlength="200"
+                       minlength="2"
                       ></textarea>
                     </div>
-                    <div class="mb-3">
-                      <label for="imagen" class="form-label">Imagen</label>
+                    <div class="mb-3  ">
+                      <label for="imagen" class="form-label ">Imagen</label>
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control "
                         id="imagen"
                         required
                       />
@@ -180,6 +182,7 @@
             </div>
           </div>
         </section>
+
       </section>
       <section class="mt-5">
         <hr />
@@ -187,32 +190,22 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th scope="col">#Idn</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Acciones</th>
+                <th class="" scope="col">#Idn</th>
+                <th class="text-center" scope="col">Titulo</th>
+                <th class="text-center" scope="col">Descripción</th>
+                <th class="text-center" scope="col">Imagen</th>
+                <th class="text-center" scope="col">Acciones</th>
               </tr>
             </thead>
 
-            <tbody id="">
-              <tr>
-                <td>1</td>
-                <td>Titulo del Juego 1</td>
-                <td>Descripción del Juego 1</td>
-                <td>URL de la Imagen del Juego 1</td>
-                <td>
-                  <button type="button" class="btn btn-primary m-2">
-                    Editar
-                  </button>
-                  <button type="button" class="btn btn-danger">Eliminar</button>
-                </td>
-              </tr>
+            <tbody id="tablajuegos">
             </tbody>
           </table>
         </article>
       </section>
+    
     </main>
+
     <footer class="bg-light text-secondary py-4">
       <div class="container">
         <div class="row">
