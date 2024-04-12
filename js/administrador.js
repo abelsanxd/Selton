@@ -1,5 +1,6 @@
 import Juegos from "./classJuegos.js";
 
+ 
 const botonAgregarJuego = document.querySelector("#botonAgregarJuego");
 const modalJuego = new bootstrap.Modal(document.getElementById("modalAgregar"));
 let crearJuego = true;
@@ -81,7 +82,7 @@ function dibujarFila(juego) {
   <td class="text-center">
     <button
       class="btn btn-warning m-1"
-      onclick="prepararEditarjuego('${juego.identificador}')"
+      onclick="prepararEditarJuego('${juego.identificador}')"
   
     >
       <i class="bi bi-pencil-square fs-4"></i>
@@ -95,6 +96,21 @@ function dibujarFila(juego) {
   </td>
 </tr>`;
 }
+
+window.prepararEditarJuego = function(identificador) {
+  console.log(prepararEditarJuego)
+  mostrarModalJuego();
+  crearJuego = false;
+  const juegoBuscado = juegos.find((juego) => juego.identificador === identificador);
+  // Cargar los datos en el formulario
+  document.querySelector("#identificador").value = juegoBuscado.identificador;
+  document.querySelector("#titulo").value = juegoBuscado.titulo;
+  document.querySelector("#descripcion").value = juegoBuscado.descripcion;
+  document.querySelector("#imagen").value = juegoBuscado.imagen;
+};
+
+
+
 
 botonAgregarJuego.addEventListener("click", mostrarModalJuego);
 formularioJuego.addEventListener("submit", administrarFormularioJuego);
