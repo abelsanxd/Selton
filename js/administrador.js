@@ -1,5 +1,6 @@
 import Juegos from "./classJuegos.js";
 
+ 
 const botonAgregarJuego = document.querySelector("#botonAgregarJuego");
 const modalJuego = new bootstrap.Modal(document.getElementById("modalAgregar"));
 let crearJuego = true;
@@ -81,7 +82,7 @@ function dibujarFila(juego) {
   <td class="text-center">
     <button
       class="btn btn-warning m-1"
-      onclick="prepararEditarjuego('${juego.identificador}')"
+      onclick="prepararEditarJuego('${juego.identificador}')"
   
     >
       <i class="bi bi-pencil-square fs-4"></i>
@@ -95,6 +96,43 @@ function dibujarFila(juego) {
   </td>
 </tr>`;
 }
+
+window.prepararEditarJuego = function(identificador) {
+  mostrarModalJuego();
+  crearJuego = false;
+  const juegoBuscado = juegos.find((juego) => juego.identificador === identificador);
+  document.querySelector("#identificador").value = juegoBuscado.identificador;
+  document.querySelector("#titulo").value = juegoBuscado.titulo;
+  document.querySelector("#descripcion").value = juegoBuscado.descripcion;
+  document.querySelector("#imagen").value = juegoBuscado.imagen;
+};
+
+function editarJuego() {
+  const identificador = document.querySelector("#identificador").value;
+
+  const posicionJuego = juegos.findIndex((juego) => juego.identificador === identificador);
+
+  juegos[posicionJuego].titulo = document.querySelector("#titulo").value;
+  juegos[posicionJuego].descripcion = document.querySelector("#descripcion").value;
+  juegos[posicionJuego].imagen = document.querySelector("#imagen").value;
+
+  guardarLocalStorage();
+
+  const tbody = document.querySelector("#tablajuegos");
+  const row = tbody.children[posicionJuego];
+  row.children[1].textContent = juegos[posicionJuego].titulo;
+  row.children[2].textContent = juegos[posicionJuego].descripcion;
+
+  Swal.fire(
+    "Juego modificado",
+    "El juego fue modificado exitosamente",
+    "success"
+  );
+
+  limpiarFormulario();
+  modalJuego.hide();
+}
+
 
 botonAgregarJuego.addEventListener("click", mostrarModalJuego);
 formularioJuego.addEventListener("submit", administrarFormularioJuego);
