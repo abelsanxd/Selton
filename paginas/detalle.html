@@ -29,7 +29,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container">
-          <a class="navbar-brand" href="../index.html">Pelicula</a>
+          <a class="navbar-brand" href="../index.html">Juegos</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -60,7 +60,7 @@
       </nav>
     </header>
     <main class="container my-5">
-      <h1 class="display-4 text-center">Detalle de peli</h1>
+      <h1 class="display-4 text-center">Detalle del juego</h1>
       <hr />
       <section id="seccionDetalle">
         <div class="card mb-3">
@@ -70,7 +70,7 @@
                 id="detalle-img"
                 src=""
                 class="img-fluid rounded-start"
-                alt="guardianes de la galaxia"
+                alt="juegos"
               />
             </div>
             <div class="col-md-8">
@@ -78,14 +78,26 @@
                 <h5 id="detalle-titulo" class="card-title"></h5>
                 <p id="detalle-descripcion" class="card-text"></p>
                 <p class="card-text">
-                  Precio:
-                  <span id="detalle-precio" class="badge rounded-pill bg-info"></span>
+                  <b>Precio: </b>
+                  <span id="detalle-precio"></span>
                 </p>
-                <p class="card-text">Año: 2023</p>
+                <p class="card-text">
+                  <b>Año:</b>
+                  <span id="detalle-anio"></span>
+                </p>
+                <p class="card-text">
+                  <b>Género:</b>
+                  <span id="detalle-genero"></span>
+                </p>
+                <div class="text-center">
+                  <button class="btn btn-dark " type="click">COMPRAR JUEGO</button>
+               </div>
               </div>
             </div>
           </div>
         </div>
+      
       </section>
+      <script src="../js/index.js"></script>
       <script src="../js/detalle.js"></script>
     </main>
