@@ -66,3 +66,22 @@ main {
     margin-top: 20vh;
     color: rgb(0 0 0 / 67%);
 }
+
+.col-descripcion {
+  width: 30%; 
+  font-size: 16px;
+  
+}
+
+.thumbnail{
+  max-width: 150px;
+}
+
+
+@media (max-width: 766px){
+
+  .col-descripcion{
+
+    font-size: 10px;
+  }
+}
