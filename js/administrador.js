@@ -98,7 +98,6 @@ function dibujarFila(juego) {
 }
 
 window.prepararEditarJuego = function(identificador) {
-  console.log(prepararEditarJuego)
   mostrarModalJuego();
   crearJuego = false;
   const juegoBuscado = juegos.find((juego) => juego.identificador === identificador);
