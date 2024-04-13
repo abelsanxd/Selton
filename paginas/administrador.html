@@ -52,29 +52,31 @@
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Category
+                  Categorias
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Accion</a></li>
                   <li><a class="dropdown-item" href="#">Terror</a></li>
-                  <li><a class="dropdown-item" href="#">Adventure</a></li>
-                  <li><a class="dropdown-item" href="#">Fight</a></li>
+                  <li><a class="dropdown-item" href="#">Aventura</a></li>
+                  <li><a class="dropdown-item" href="#">Luchas</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link search-link" href="#"
-                  >Search <i class="bi bi-search"></i
+                  >Buscar <i class="bi bi-search"></i
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./administrador.html">Admin</a>
+                <a class="nav-link" href="./paginas/administrador.html"
+                  >Administrador</a
+                >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="../paginas/entrar.html"
-                  >Login <i class="bi bi-person-circle"></i
+                  href="./entrar.html"
+                  >Acceso <i class="bi bi-person-circle"></i
                 ></a>
               </li>
             </ul>
@@ -86,7 +88,7 @@
                 aria-label="Buscar"
               />
               <button class="btn btn-outline-success" type="submit">
-                Search
+                Buscar
               </button>
             </form>
           </div>
@@ -149,6 +151,8 @@
                         class="form-control"
                         id="titulo"
                         required
+                        maxlength="200"
+                        minlength="2"
                       />
                     </div>
                     <div class="mb-3">
@@ -171,6 +175,50 @@
                         class="form-control"
                         id="imagen"
                         required
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="precio" class="form-label">Precio</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="precio"
+                        required
+                        maxlength="200"
+                        minlength="1"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="categoria" class="form-label">Categoria</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="categoria"
+                        required
+                        maxlength="200"
+                        minlength="2"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="requisitos" class="form-label">Requisitos del sistema</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="requisitos"
+                        required
+                        maxlength="200"
+                        minlength="2"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="desarrollador" class="form-label">Desarrollador</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="desarrollador"
+                        required
+                        maxlength="200"
+                        minlength="2"
                       />
                     </div>
                     <button type="submit" class="btn btn-primary">
