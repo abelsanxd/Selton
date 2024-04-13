@@ -23,7 +23,4 @@ function verificarSesion() {
 document.getElementById("logoutLink").addEventListener("click", function () {
   // Eliminar la información de inicio de sesión del localStorage
   localStorage.removeItem("usuarioAutenticado");
-
-  // Redirigir al usuario a la página de inicio de sesión
-  window.location.href = "./entrar.html";
 });
