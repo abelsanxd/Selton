@@ -27,9 +27,9 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="../index.html">Juegos</a>
+          <a class="navbar-brand" href="../index.html">SELTON</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,14 +44,45 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html"
-                  >Inicio</a
+                <a class="nav-link search-link" href="#"
+                  >Search <i class="bi bi-search"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./administrador.html" id="adminLink"
+                  >Admin</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="administrador.html">Administrador</a>
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./entrar.html"
+                  id="loginLink"
+                  >Login <i class="bi bi-person-circle"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./entrar.html"
+                  id="logoutLink"
+                  >Logout <i class="bi bi-person-circle"></i
+                ></a>
               </li>
             </ul>
+            <form class="search-bar d-none" id="searchForm">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Buscar"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
           </div>
         </div>
       </nav>

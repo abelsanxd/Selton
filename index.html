@@ -50,7 +50,10 @@
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./paginas/administrador.html"
+                <a
+                  class="nav-link"
+                  href="./paginas/administrador.html"
+                  id="adminLink"
                   >Admin</a
                 >
               </li>
@@ -59,7 +62,17 @@
                   class="nav-link"
                   aria-current="page"
                   href="./paginas/entrar.html"
+                  id="loginLink"
                   >Login <i class="bi bi-person-circle"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./entrar.html"
+                  id="logoutLink"
+                  >Logout <i class="bi bi-person-circle"></i
                 ></a>
               </li>
             </ul>
@@ -117,7 +130,11 @@
                   Nos vemos en la cancha. <br />
                   Ahora disponible para todas las plataformas.
                 </p>
-                <a href="./paginas/error404.html" class="btn btn-success text-dark">Juga ahora!</a>
+                <a
+                  href="./paginas/error404.html"
+                  class="btn btn-success text-dark"
+                  >Juga ahora!</a
+                >
               </div>
             </div>
             <div class="carousel-item">
@@ -173,12 +190,10 @@
           </button>
         </div>
       </section>
-      <section class="container my-5 ">
+      <section class="container my-5">
         <h2 class="mb-lg-5 mb-sm-3">Principales juegos populares!</h2>
 
-        <div  id="card" class="row ">
-
-        </div>
+        <div id="card" class="row"></div>
       </section>
     </main>
     <footer class="bg-light text-secondary py-4">
@@ -218,4 +233,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="./js/index.js" type="module"></script>
+  <script src="./js/cachumba.js"></script>
 </html>
