@@ -45,11 +45,6 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link search-link" href="#"
-                  >Search <i class="bi bi-search"></i
-                ></a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="./paginas/administrador.html"
                   >Admin</a
                 >
@@ -175,9 +170,15 @@
       </section>
       <section class="container my-5 ">
         <h2 class="mb-lg-5 mb-sm-3">Principales juegos populares!</h2>
-
+        <div class="row mt-5 justify-content-start">
+          <div class="col-lg-4">
+            <form class="d-flex" id="formBusqueda">
+              <button class="btn btn-outline-success me-2" type="submit">Buscar</button>
+              <input id="inputBusqueda" class="form-control me-2" type="search" placeholder="Buscar juegos..." aria-label="Buscar">
+            </form>
+          </div>
+        </div>
         <div  id="card" class="row ">
-
         </div>
       </section>
     </main>
