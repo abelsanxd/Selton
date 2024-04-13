@@ -77,6 +77,15 @@ main {
   max-width: 150px;
 }
 
+.botonCardIndex{
+
+  font-size: 15px;
+
+}
+.tamanioTitulo{
+
+  font-size: 25px;
+}
 
 @media (max-width: 766px){
 
@@ -84,4 +93,15 @@ main {
 
     font-size: 10px;
   }
+  .botonCardIndex{
+
+    font-size: 7px;
+    padding: 2%;
+
+  }
+  .tamanioTitulo{
+    font-size: 12px;
+  }
+
+
 }
