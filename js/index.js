@@ -18,7 +18,7 @@ if (juegos) {
           <div class="card-body ">
             <h5 class="card-title tamanioTitulo">${juego.titulo}</h5>
             <a
-              href="./paginas/detalle.html"
+              href="../paginas/detalle.html"
               class="btn btn-primary botonCardIndex "
               >Ver detalles</a
             >

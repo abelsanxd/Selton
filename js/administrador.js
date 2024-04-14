@@ -8,6 +8,8 @@ const identificador = document.querySelector("#identificador");
 const imagen = document.querySelector("#imagen");
 const descripcion = document.querySelector("#descripcion");
 const titulo = document.querySelector("#titulo");
+const requisitoSistema = document.querySelector("#requisitoSistema");
+const categoria = document.querySelector("#categoria");
 const juegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
 function mostrarModalJuego() {
@@ -27,11 +29,16 @@ function administrarFormularioJuego(e) {
 }
 
 function agregandoJuego() {
+  const imageUrl = imagen.value;
+  const precio = document.querySelector("#precio").value;
   const juegoNuevo = new Juegos(
     titulo.value,
     descripcion.value,
-    imagen.value,
-    identificador.value
+    imageUrl,
+    identificador.value,
+    requisitoSistema.value,
+    categoria.value,
+    precio
   );
   console.log(juegoNuevo);
   juegos.push(juegoNuevo);
@@ -71,9 +78,8 @@ function dibujarFila(juego) {
     <td class="col-descripcion ">${juego.descripcion}</td>
     <td class="text-center">
       <img
-        class="img-thumbnail rounded img-fluid thumbnail "
+        class="img-thumbnail rounded img-fluid thumbnail"
         src=${juego.imagen}
-        alt=${juego.titulo}
       />
     </td>
     <td class="text-center">
@@ -99,6 +105,7 @@ window.prepararEditarJuego = function (identificador) {
   const juegoBuscado = juegos.find(
     (juego) => juego.identificador === identificador
   );
+  console.log("Juego buscado:", juegoBuscado);
   document.querySelector("#identificador").value = juegoBuscado.identificador;
   document.querySelector("#titulo").value = juegoBuscado.titulo;
   document.querySelector("#descripcion").value = juegoBuscado.descripcion;
@@ -107,29 +114,27 @@ window.prepararEditarJuego = function (identificador) {
 
 function editarJuego() {
   const identificador = document.querySelector("#identificador").value;
-
   const posicionJuego = juegos.findIndex(
     (juego) => juego.identificador === identificador
   );
-
   juegos[posicionJuego].titulo = document.querySelector("#titulo").value;
   juegos[posicionJuego].descripcion =
     document.querySelector("#descripcion").value;
-  juegos[posicionJuego].imagen = document.querySelector("#imagen").value;
-
+  const imageUrl = imagen.value;
+  juegos[posicionJuego].imagen = imageUrl;
+  juegos[posicionJuego].requisitoSistema = requisitoSistema.value;
+  juegos[posicionJuego].categoria = categoria.value;
+  juegos[posicionJuego].precio = document.querySelector("#precio").value; // Se actualiza el precio del juego
   guardarLocalStorage();
-
   const tbody = document.querySelector("#tablajuegos");
   const row = tbody.children[posicionJuego];
   row.children[1].textContent = juegos[posicionJuego].titulo;
   row.children[2].textContent = juegos[posicionJuego].descripcion;
-
   Swal.fire(
     "Juego modificado",
     "El juego fue modificado exitosamente",
     "success"
   );
-
   limpiarFormulario();
   modalJuego.hide();
 }
