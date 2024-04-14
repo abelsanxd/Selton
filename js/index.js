@@ -18,8 +18,8 @@ if (juegos) {
           <div class="card-body ">
             <h5 class="card-title tamanioTitulo">${juego.titulo}</h5>
             <a
-              href="../paginas/detalle.html"
-              class="btn btn-primary botonCardIndex "
+              href="../paginas/detalle.html?id=${juego.identificador}"
+              class="btn btn-primary botonCardIndex"
               >Ver detalles</a
             >
           </div>
@@ -44,11 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function buscarJuego(terminoBusqueda) {
-
   const juegosFiltrados = juegos.filter((juego) =>
     juego.titulo.toLowerCase().includes(terminoBusqueda.toLowerCase())
   );
-
 
   const article = document.getElementById("card");
   article.innerHTML = "";
@@ -65,8 +63,8 @@ function buscarJuego(terminoBusqueda) {
           <div class="card-body ">
             <h5 class="card-title tamanioTitulo">${juego.titulo}</h5>
             <a
-              href="./paginas/detalle.html"
-              class="btn btn-primary botonCardIndex "
+              href="./paginas/detalle.html?id=${juego.identificador}"
+              class="btn btn-primary botonCardIndex"
               >Ver detalles</a
             >
           </div>

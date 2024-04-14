@@ -9,6 +9,7 @@ const imagen = document.querySelector("#imagen");
 const descripcion = document.querySelector("#descripcion");
 const titulo = document.querySelector("#titulo");
 const requisitoSistema = document.querySelector("#requisitoSistema");
+const desarrollador = document.querySelector("#desarrollador")
 const categoria = document.querySelector("#categoria");
 const juegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
@@ -30,6 +31,7 @@ function administrarFormularioJuego(e) {
 
 function agregandoJuego() {
   const imageUrl = imagen.value;
+  const desarrollador = document.querySelector("#desarrollador").value;
   const precio = document.querySelector("#precio").value;
   const juegoNuevo = new Juegos(
     titulo.value,
@@ -37,8 +39,9 @@ function agregandoJuego() {
     imageUrl,
     identificador.value,
     requisitoSistema.value,
-    categoria.value,
-    precio
+    categoria,
+    precio,
+    desarrollador.value
   );
   console.log(juegoNuevo);
   juegos.push(juegoNuevo);
@@ -110,6 +113,7 @@ window.prepararEditarJuego = function (identificador) {
   document.querySelector("#titulo").value = juegoBuscado.titulo;
   document.querySelector("#descripcion").value = juegoBuscado.descripcion;
   document.querySelector("#imagen").value = juegoBuscado.imagen;
+  document.querySelector("#desarrollador").value = juegoBuscado.desarrollador;
 };
 
 function editarJuego() {
@@ -124,7 +128,8 @@ function editarJuego() {
   juegos[posicionJuego].imagen = imageUrl;
   juegos[posicionJuego].requisitoSistema = requisitoSistema.value;
   juegos[posicionJuego].categoria = categoria.value;
-  juegos[posicionJuego].precio = document.querySelector("#precio").value; // Se actualiza el precio del juego
+  juegos[posicionJuego].precio = document.querySelector("#precio").value;
+  juegos[posicionJuego].desarrollador = desarrollador.value;
   guardarLocalStorage();
   const tbody = document.querySelector("#tablajuegos");
   const row = tbody.children[posicionJuego];

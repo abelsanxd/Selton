@@ -41,6 +41,8 @@ main {
   background-color: rgb(206, 206, 206);
 }
 
+
+
 @media (min-width: 0px) and (max-width: 768px) {
   .flecha-de,
   .flecha-iz,
@@ -99,3 +101,4 @@ main {
 #adminLink {
   display: none;
 }
+
