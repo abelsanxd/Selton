@@ -8,11 +8,6 @@ const identificador = document.querySelector("#identificador");
 const imagen = document.querySelector("#imagen");
 const descripcion = document.querySelector("#descripcion");
 const titulo = document.querySelector("#titulo");
-const precio = document.querySelector("#precio");
-const categoria = document.querySelector("#categoria");
-const requisitos = document.querySelector("#requisitos");
-const desarrollador = document.querySelector("#desarrollador");
-
 const juegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
 function mostrarModalJuego() {
@@ -36,12 +31,7 @@ function agregandoJuego() {
     titulo.value,
     descripcion.value,
     imagen.value,
-    identificador.value,
-    precio.value,
-    categoria.value,
-    requisitos.value,
-    desarrollador.value
-
+    identificador.value
   );
   console.log(juegoNuevo);
   juegos.push(juegoNuevo);
@@ -113,11 +103,6 @@ window.prepararEditarJuego = function (identificador) {
   document.querySelector("#titulo").value = juegoBuscado.titulo;
   document.querySelector("#descripcion").value = juegoBuscado.descripcion;
   document.querySelector("#imagen").value = juegoBuscado.imagen;
-  document.querySelector("#precio").value = juegoBuscado.precio;
-  document.querySelector("#categoria").value = juegoBuscado.categoria;
-  document.querySelector("#requisitos").value = juegoBuscado.requisitos;
-  document.querySelector("#desarrollador").value = juegoBuscado.desarrollador;
-
 };
 
 function editarJuego() {
@@ -131,11 +116,6 @@ function editarJuego() {
   juegos[posicionJuego].descripcion =
     document.querySelector("#descripcion").value;
   juegos[posicionJuego].imagen = document.querySelector("#imagen").value;
-  juegos[posicionJuego].precio = document.querySelector("#precio").value;
-  juegos[posicionJuego].categoria = document.querySelector("#categoria").value;
-  juegos[posicionJuego].requisitos = document.querySelector("#requisitos").value;
-  juegos[posicionJuego].desarrollador = document.querySelector("#desarrollador").value;
-
 
   guardarLocalStorage();
 
