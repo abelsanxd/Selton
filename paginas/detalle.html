@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Iñaki Zavaleta" />
+    <meta name="author" content="Abel Perez" />
     <meta
       name="keywords"
       content="Juegos, tienda de juegos, videojuegos, consolas, PC gaming, juegos en línea, ofertas de juegos, comunidad de jugadores, torneos de juegos, eventos de gaming."
@@ -22,7 +22,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Selton</title>
   </head>
   <body>
@@ -48,7 +49,10 @@
                   >About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./administrador.html" id="adminLink"
+                <a
+                  class="nav-link"
+                  href="./administrador.html"
+                  id="adminLink"
                   >Admin</a
                 >
               </li>
@@ -86,48 +90,52 @@
         </div>
       </nav>
     </header>
-    <main class="container my-5">
-      <h1 class="display-4 text-center">Detalle del juego</h1>
-      <hr />
-      <section id="seccionDetalle">
-        <div class="card mb-3">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                id="detalle-img"
-                src=""
-                class="img-fluid rounded-start"
-                alt="juegos"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 id="detalle-titulo" class="card-title"></h5>
-                <p id="detalle-descripcion" class="card-text"></p>
-                <p class="card-text">
-                  <b>Precio: </b>
-                  <span id="detalle-precio"></span>
-                </p>
-                <p class="card-text">
-                  <b>Año:</b>
-                  <span id="detalle-anio"></span>
-                </p>
-                <p class="card-text">
-                  <b>Género:</b>
-                  <span id="detalle-genero"></span>
-                </p>
-                <div class="text-center">
-                  <button class="btn btn-dark" type="click">
-                    COMPRAR JUEGO
-                  </button>
-                </div>
-              </div>
+    <main>
+      <main>
+        <div class="text-center border-bottom mt-2 pb-2">
+            <h1 class="display-1">Detalle de juego</h1>
+          </div>
+          <section id="seccion-detalle">
+            <div class="card mb-3 border m-5" id="detalleJuego">
+          </div>
+          </section>
+    </main>
+    </main>
+    <footer class="bg-light text-secondary py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 text-center text-lg-start mb-3">
+            <img width="90px" src="" alt="" />
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <h4>Opening hours</h4>
+            <ul>
+              <li>opening hours of 09 a 21hs.</li>
+              <li>Saturday and Sunday of 09 a 12hs.</li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <h4>follow us on our networks:</h4>
+            <div class="text-center">
+              <a href="#" class="link-secondary">
+                <i class="bi bi-facebook fs-1"></i>
+              </a>
+              <a href="#" class="link-secondary mx-3">
+                <i class="bi bi-whatsapp fs-1"></i>
+              </a>
+              <a href="#" class="link-secondary">
+                <i class="bi bi-instagram fs-1"></i>
+              </a>
             </div>
           </div>
         </div>
-      </section>
-      <script src="../js/index.js"></script>
-      <script src="../js/detalle.js"></script>
-    </main>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/detalleJuego.js"></script>
   </body>
 </html>
