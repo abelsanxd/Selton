@@ -114,6 +114,10 @@ window.prepararEditarJuego = function (identificador) {
   document.querySelector("#descripcion").value = juegoBuscado.descripcion;
   document.querySelector("#imagen").value = juegoBuscado.imagen;
   document.querySelector("#desarrollador").value = juegoBuscado.desarrollador;
+  document.querySelector("#categoria").value = juegoBuscado.categoria;
+  document.querySelector("#precio").value = juegoBuscado.precio;
+  document.querySelector("#requisitoSistema").value = juegoBuscado.requisitoSistema;
+
 };
 
 function editarJuego() {
