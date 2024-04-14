@@ -3,20 +3,29 @@ class Juegos {
   #titulo;
   #descripcion;
   #imagen;
-
+  #categoria;
+  #requisitoSistema;
+  #desarrollador;
+  #resenias;
 
   constructor(
+    identificador,
     titulo,
     descripcion,
     imagen,
-    identificador,
-
+    categoria,
+    requisitoSistema,
+    desarrollador,
+    resenias
   ) {
     this.#identificador = crypto.randomUUID();
     this.#titulo = titulo;
     this.#descripcion = descripcion;
     this.#imagen = imagen;
-
+    this.#categoria = categoria;
+    this.#requisitoSistema = requisitoSistema;
+    this.#desarrollador = desarrollador;
+    this.#resenias = resenias;
   }
 
   get identificador() {
@@ -50,6 +59,35 @@ class Juegos {
   set imagen(imagen) {
     this.#imagen = imagen;
   }
+  get categoria() {
+    return this.#categoria;
+  }
+
+  set categoria(categoria) {
+    this.#categoria = categoria;
+  }
+
+  get requisitoSistema() {
+    return this.#requisitoSistema;
+  }
+
+  set requisitoSistema(requisitoSistema) {
+    this.#requisitoSistema = requisitoSistema;
+  }
+  get desarrollador() {
+    return this.#desarrollador;
+  }
+
+  set desarrollador(desarrollador) {
+    this.#desarrollador = desarrollador;
+  }
+  get resenias() {
+    return this.#resenias;
+  }
+
+  set resenias(resenias) {
+    this.#resenias = resenias;
+  }
 
   toJSON() {
     return {
@@ -57,6 +95,10 @@ class Juegos {
       titulo: this.titulo,
       descripcion: this.descripcion,
       imagen: this.imagen,
+      categoria: this.categoria,
+      requisitoSistema: this.requisitoSistema,
+      desarrollador: this.desarrollador,
+      resenias: this.resenias,
     };
   }
 }
