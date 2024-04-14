@@ -51,57 +51,51 @@ main {
 }
 
 #bodyBglogin {
-    background-image: url('../img/bgLoginTwo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+  background-image: url("../img/bgLoginTwo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .card-customLogin {
-    background-color:rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20vh;
-    color: rgb(0 0 0 / 67%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20vh;
+  color: rgb(0 0 0 / 67%);
 }
 
 .col-descripcion {
-  width: 30%; 
+  width: 30%;
   font-size: 16px;
-  
 }
 
-.thumbnail{
+.thumbnail {
   max-width: 150px;
 }
 
-.botonCardIndex{
-
+.botonCardIndex {
   font-size: 15px;
-
 }
-.tamanioTitulo{
-
+.tamanioTitulo {
   font-size: 25px;
 }
 
-@media (max-width: 766px){
-
-  .col-descripcion{
-
+@media (max-width: 766px) {
+  .col-descripcion {
     font-size: 10px;
   }
-  .botonCardIndex{
-
+  .botonCardIndex {
     font-size: 7px;
     padding: 2%;
-
   }
-  .tamanioTitulo{
+  .tamanioTitulo {
     font-size: 12px;
   }
+}
 
-
+#adminLink {
+  display: none;
 }

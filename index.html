@@ -30,7 +30,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="./index.html">SELTON</a>
+          <a class="navbar-brand" href="index.html">SELTON</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,15 +44,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+              <li class="nav-item">
+                <a class="nav-link search-link" href="./paginas/acerca.html"
+                  >Sobre nosotros</a
                 >
-                  Categorias
+                
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Accion</a></li>
@@ -61,11 +57,7 @@
                   <li><a class="dropdown-item" href="#">Luchas</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link search-link" href="#"
-                  >Buscar <i class="bi bi-search"></i
-                ></a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link" href="./paginas/administrador.html"
                   >Administrador</a
@@ -77,6 +69,15 @@
                   aria-current="page"
                   href="./paginas/entrar.html"
                   >Acceso <i class="bi bi-person-circle"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  id="logoutLink"
+                  href="./paginas/entrar.html"
+                  >Logout <i class="bi bi-person-circle"></i
                 ></a>
               </li>
             </ul>
@@ -134,7 +135,11 @@
                   Nos vemos en la cancha. <br />
                   Ahora disponible para todas las plataformas.
                 </p>
-                <a href="./paginas/error404.html" class="btn btn-success text-dark">Juga ahora!</a>
+                <a
+                  href="./paginas/error404.html"
+                  class="btn btn-success text-dark"
+                  >Juga ahora!</a
+                >
               </div>
             </div>
             <div class="carousel-item">
@@ -149,7 +154,7 @@
                   Una aventura narrativa de un viaje por carretera. <br />
                   Ahora disponible para todas las plataformas.
                 </p>
-                <a href="#" class="btn btn-success text-dark">Juga ahora!</a>
+                <a href="./paginas/error404.html" class="btn btn-success text-dark">Juga ahora!</a>
               </div>
             </div>
             <div class="carousel-item">
@@ -166,7 +171,7 @@
                   Surmegete en la Hora Oscura. <br />
                   Ahora disponible para todas las plataformas.
                 </p>
-                <a href="#" class="btn btn-success text-dark">Juga ahora!</a>
+                <a href="./paginas/error404.html" class="btn btn-success text-dark">Juga ahora!</a>
               </div>
             </div>
           </div>
@@ -190,11 +195,17 @@
           </button>
         </div>
       </section>
-      <section class="container my-5 ">
+      <section class="container my-5">
         <h2 class="mb-lg-5 mb-sm-3">Principales juegos populares!</h2>
-
+        <div class="row mt-5 justify-content-start">
+          <div class="col-lg-4">
+            <form class="d-flex" id="formBusqueda">
+              <button class="btn btn-outline-success me-2" type="submit">Buscar</button>
+              <input id="inputBusqueda" class="form-control me-2" type="search" placeholder="Buscar juegos..." aria-label="Buscar">
+            </form>
+          </div>
+        </div>
         <div  id="card" class="row ">
-
         </div>
       </section>
     </main>
@@ -235,4 +246,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="./js/index.js" type="module"></script>
+  <script src="./js/logout.js"></script>
 </html>
