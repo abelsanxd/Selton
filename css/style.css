@@ -41,6 +41,12 @@ main {
   background-color: rgb(206, 206, 206);
 }
 
+.logoFooter{
+
+  width: 150px ;
+  height: auto;
+  object-fit: contain;
+}
 
 
 @media (min-width: 0px) and (max-width: 768px) {
