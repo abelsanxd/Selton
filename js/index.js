@@ -9,7 +9,7 @@ if (juegos) {
   juegos.forEach((juego) => {
     article.innerHTML += /* HTML */ `<article class="col-md-3">
     <div class="card-sl">
-        <div class="card-image">
+        <div class="card-image mt-4">
             <img src="${juego.imagen}" class="card-img-top" alt="${juego.titulo}" />
         </div>
         <div class="card-content">
