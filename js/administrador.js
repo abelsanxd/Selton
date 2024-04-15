@@ -87,7 +87,7 @@ function dibujarFila(juego) {
     </td>
     <td class="text-center">
       <button
-        class="btn btn-warning m-1"
+        class="btn btn-outline-primary m-1"
         onclick="prepararEditarJuego('${juego.identificador}')"
       >
         <i class="bi bi-pencil-square fs-4"></i>

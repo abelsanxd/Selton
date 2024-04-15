@@ -48,6 +48,12 @@ main {
   object-fit: contain;
 }
 
+.textoDetalle{
+
+  color: rgb(72, 73, 18);
+  font-weight: 600;
+}
+
 
 @media (min-width: 0px) and (max-width: 768px) {
   .flecha-de,

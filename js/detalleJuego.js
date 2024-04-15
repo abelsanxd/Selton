@@ -27,12 +27,12 @@ seccionDetalle.innerHTML = `
         </div>
         <div class="col-md-6 fs-3">
             <div class="card-body">
-                <h5 class="card-title">${juegoBuscado.titulo}</h5>
-                <p class="card-text">${juegoBuscado.descripcion}</p>
-                <p class="card-text">Categoria: ${juegoBuscado.categoria}</p>
-                <p class="card-text">Desarrollador: ${juegoBuscado.desarrollador}</p>
-                <p class="card-text">Requisitos del sistema: ${juegoBuscado.requisitoSistema}</p>
-                <p class="card-text">Precio: ${juegoBuscado.precio} USD</p>
+                <h5 class="card-title fs-2 textoDetalle">${juegoBuscado.titulo}</h5>
+                <p class="card-text fs-5">${juegoBuscado.descripcion}</p>
+                <p class="card-text fs-5">Categoria: ${juegoBuscado.categoria}</p>
+                <p class="card-text fs-5">Desarrollador: ${juegoBuscado.desarrollador}</p>
+                <p class="card-text fs-5">Requisitos del sistema: ${juegoBuscado.requisitoSistema}</p>
+                <p class="card-text fs-5">Precio: ${juegoBuscado.precio} USD</p>
             </div>
         </div>
     </div>
