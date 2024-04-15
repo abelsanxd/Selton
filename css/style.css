@@ -85,6 +85,17 @@ main {
   font-size: 25px;
 }
 
+.tamanioLogo{
+  width: 3%;
+  height: 3%;
+}
+.tamanioLogoLike{
+  display: flex;
+  width: 2%;
+  height: 2%;
+}
+
+
 @media (max-width: 766px) {
   .col-descripcion {
     font-size: 10px;
@@ -95,6 +106,15 @@ main {
   }
   .tamanioTitulo {
     font-size: 12px;
+  }
+  .tamanioLogoLike{
+    display: flex;
+    width: 8%;
+    height: 8%;
+  }
+  .tamanioLogo{
+    width: 10%;
+    height: 10%;
   }
 }
 
