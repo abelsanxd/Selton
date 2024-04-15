@@ -41,6 +41,18 @@ main {
   background-color: rgb(206, 206, 206);
 }
 
+.logoFooter{
+
+  width: 150px ;
+  height: auto;
+  object-fit: contain;
+}
+
+.textoDetalle{
+
+  color: rgb(72, 73, 18);
+  font-weight: 600;
+}
 
 
 @media (min-width: 0px) and (max-width: 768px) {

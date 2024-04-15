@@ -16,7 +16,7 @@ if (juegos) {
             alt="${juego.titulo}"
           />
           <div class="card-body ">
-            <h5 class="card-title tamanioTitulo">${juego.titulo}</h5>
+            <h5 class="card-title tamanioTitulo textoDetalle">${juego.titulo}</h5>
             <a
               href="../paginas/detalle.html?id=${juego.identificador}"
               class="btn btn-primary botonCardIndex"
