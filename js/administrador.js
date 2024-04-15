@@ -10,7 +10,7 @@ const imagen = document.querySelector("#imagen");
 const descripcion = document.querySelector("#descripcion");
 const titulo = document.querySelector("#titulo");
 const requisitoSistema = document.querySelector("#requisitoSistema");
-const desarrollador = document.querySelector("#desarrollador")
+const desarrollador = document.querySelector("#desarrollador");
 const categoria = document.querySelector("#categoria");
 const juegos = JSON.parse(localStorage.getItem("listaJuegosKey")) || [];
 
@@ -117,8 +117,8 @@ window.prepararEditarJuego = function (identificador) {
   document.querySelector("#desarrollador").value = juegoBuscado.desarrollador;
   document.querySelector("#categoria").value = juegoBuscado.categoria;
   document.querySelector("#precio").value = juegoBuscado.precio;
-  document.querySelector("#requisitoSistema").value = juegoBuscado.requisitoSistema;
-
+  document.querySelector("#requisitoSistema").value =
+    juegoBuscado.requisitoSistema;
 };
 
 function editarJuego() {
@@ -178,7 +178,6 @@ window.borrarJuego = function (idJuego) {
     }
   });
 };
-
 
 botonAgregarJuego.addEventListener("click", mostrarModalJuego);
 formularioJuego.addEventListener("submit", administrarFormularioJuego);
