@@ -22,15 +22,19 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="./css/cardIndex.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="icon" href="./img/Selton.png" type="image/jpg" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Selton</title>
   </head>
-  <body>
+  <body data-bs-theme="">
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">SELTON</a>
+          <a class="navbar-brand" href="index.html">
+            <img class="logoFooter" src="./img/Selton4.png" alt="logo selton"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -44,34 +48,35 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+              <li class="nav-item">
+                <a class="nav-link search-link" href="./paginas/acerca.html"
+                  >Nosotros</a
                 >
-                  Category
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Acction</a></li>
-                  <li><a class="dropdown-item" href="#">Terror</a></li>
-                  <li><a class="dropdown-item" href="#">Adventure</a></li>
-                  <li><a class="dropdown-item" href="#">Fight</a></li>
-                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link search-link" href="#"
-                  >Search <i class="bi bi-search"></i
+                <a
+                  class="nav-link"
+                  href="./paginas/administrador.html"
+                  id="adminLink"
+                  >Administrador</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="./paginas/entrar.html"
+                  id="loginLink"
+                  >Entrar <i class="bi bi-person-circle"></i
                 ></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Admin</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"
-                  >Login <i class="bi bi-person-circle"></i
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  id="logoutLink"
+                  href="./paginas/entrar.html"
+                  >Cerrar sesion <i class="bi bi-person-circle"></i
                 ></a>
               </li>
             </ul>
@@ -83,42 +88,174 @@
                 aria-label="Buscar"
               />
               <button class="btn btn-outline-success" type="submit">
-                Search
+                Buscar
               </button>
             </form>
           </div>
         </div>
       </nav>
     </header>
-    <main></main>
-    <footer class="bg-light text-secondary py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 text-center text-lg-start mb-3">
-            <img
-              width="90px"
-              src=""
-              alt=""
-            />
+    <main>
+      <section class="container my-5">
+        <h2 class="mb-lg-5 mb-sm-3 textoDetalle display-6">Desliza para ver mas</h2>
+        <div id="carousel-juegos" class="carousel slide">
+          <div class="carousel-indicators numero-juegos-carousel">
+            <button
+              type="button"
+              data-bs-target="#carousel-juegos"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel-juegos"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carousel-juegos"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <h4>Horarios de atención</h4>
-            <ul>
-              <li>Lunes a viernes de 09 a 21hs.</li>
-              <li>Sabados y domingos de 09 a 12hs.</li>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="img/sliderJuegos/nba-2k24.jpg"
+                class="d-block w-100 object-fit-cover"
+                alt="NBA 2024"
+              />
+              <div class="position-absolute texto-juegos-slider text-dark">
+                <h2 class="fw-semibold">NBA 2K24</h2>
+                <p>
+                  Nos vemos en la cancha. <br />
+                  Ahora disponible para todas las plataformas.
+                </p>
+                <a
+                  href="./paginas/error404.html"
+                  class="btn btn-dark text-light"
+                  >Juga ahora!</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/sliderJuegos/open-roads.jpg"
+                class="d-block w-100 object-fit-cover"
+                alt="Open Roads"
+              />
+              <div class="position-absolute texto-juegos-slider text-light">
+                <h2 class="fw-semibold">Open Roads</h2>
+                <p>
+                  Una aventura narrativa de un viaje por carretera. <br />
+                  Ahora disponible para todas las plataformas.
+                </p>
+                <a
+                  href="./paginas/error404.html"
+                  class="btn btn-dark text-light"
+                  >Juga ahora!</a
+                >
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="img/sliderJuegos/persona-3-reload.jpg"
+                class="d-block w-100 object-fit-cover"
+                alt="Persona 3"
+              />
+              <div
+                class="position-absolute texto-juegos-slider-persona text-light"
+              >
+                <h2 class="fw-semibold">Persona 3 Reload</h2>
+                <p>
+                  Surmegete en la Hora Oscura. <br />
+                  Ahora disponible para todas las plataformas.
+                </p>
+                <a
+                  href="./paginas/error404.html"
+                  class="btn btn-dark text-light"
+                  >Juga ahora!</a
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev flecha-iz"
+            type="button"
+            data-bs-target="#carousel-juegos"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next flecha-de"
+            type="button"
+            data-bs-target="#carousel-juegos"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguente</span>
+          </button>
+        </div>
+      </section>
+      <section class="container my-5">
+        <h2 class="mb-lg-5 mb-sm-3">Principales juegos populares!</h2>
+        <div class="row mt-5 justify-content-start">
+          <div class="col-lg-4 mb-3">
+            <form class="d-flex" id="formBusqueda">
+              <button class="btn btn-outline-primary me-2" type="submit">
+                Buscar
+              </button>
+              <input
+                id="inputBusqueda"
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar juegos..."
+                aria-label="Buscar"
+              />
+            </form>
+          </div>
+        </div>
+        <div id="card" class="row"></div>
+      </section>
+    </main>
+    <footer class="bg-light text-secondary">
+      <div class="container pt-3">
+        <div class="row text-center text-lg-start">
+          <div class="col-12 col-md-4 col-lg-4">
+            <a href="#"
+              ><img
+                src="./img/Selton4.png"
+                alt="Logo selton"
+                class="logoFooter mt-4 mb-3"
+            /></a>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4">
+            <h5 class="">Horarios de atención</h5>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="">Lunes a viernes de 09 a 21hs.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Sabados y domingos de 09 a 12hs.</a>
+              </li>
             </ul>
           </div>
-          <div class="col-md-6 col-lg-4">
-            <h4>Seguinos en nuestras redes:</h4>
+          <div class="col-12 col-md-4 col-lg-4 text-md-center">
+            <h5>Seguinos en nuestras redes:</h5>
             <div class="text-center">
-              <a href="#" class="link-secondary">
-                <i class="bi bi-facebook fs-1"></i
-              ></a>
-              <a href="#" class="link-secondary mx-3"
-                ><i class="bi bi-whatsapp fs-1"></i
+              <a href="#" class="link-secondary"
+                ><i class="bi bi-facebook fs-3 p-2"></i
               ></a>
               <a href="#" class="link-secondary"
-                ><i class="bi bi-instagram fs-1"></i
+                ><i class="bi bi-whatsapp fs-3 p-2"></i
+              ></a>
+              <a href="#" class="link-secondary"
+                ><i class="bi bi-instagram fs-3 p-2"></i
               ></a>
             </div>
           </div>
@@ -131,4 +268,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
+  <script src="./js/index.js" type="module"></script>
+  <script src="./js/logout.js"></script>
 </html>

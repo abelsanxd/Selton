@@ -1,10 +1,136 @@
-
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
+
+/* Slider Index */
+
+.texto-juegos-slider {
+  top: 30%;
+  right: 10%;
+}
+
+.texto-juegos-slider-persona {
+  top: 30%;
+  left: 17%;
+}
+
+.flecha-de {
+  right: -66px;
+}
+
+.flecha-iz {
+  left: -66px;
+}
+
+.flecha-de,
+.flecha-iz {
+  background-color: rgb(194, 194, 194);
+  width: 5%;
+  height: 50%;
+  top: 25%;
+}
+
+.numero-juegos-carousel {
+  bottom: -39px;
+  background-color: rgb(206, 206, 206);
+}
+
+.logoFooter{
+
+  width: 150px ;
+  height: auto;
+  object-fit: contain;
+}
+
+.textoDetalle{
+
+  color: rgb(72, 73, 18);
+  font-weight: 600;
+}
+
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .flecha-de,
+  .flecha-iz,
+  .texto-juegos-slider,
+  .texto-juegos-slider-persona {
+    display: none;
+  }
+}
+
+#bodyBglogin {
+  background-image: url("../img/bgLoginTwo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.card-customLogin {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20vh;
+  color: rgb(0 0 0 / 67%);
+}
+
+.col-descripcion {
+  width: 30%;
+  font-size: 16px;
+}
+
+.thumbnail {
+  max-width: 150px;
+}
+
+.botonCardIndex {
+  font-size: 15px;
+}
+.tamanioTitulo {
+  font-size: 25px;
+}
+
+.tamanioLogo{
+  width: 3%;
+  height: 3%;
+}
+.tamanioLogoLike{
+  display: flex;
+  width: 2%;
+  height: 2%;
+}
+
+
+@media (max-width: 766px) {
+  .col-descripcion {
+    font-size: 10px;
+  }
+  .botonCardIndex {
+    font-size: 7px;
+    padding: 2%;
+  }
+  .tamanioTitulo {
+    font-size: 12px;
+  }
+  .tamanioLogoLike{
+    display: flex;
+    width: 8%;
+    height: 8%;
+  }
+  .tamanioLogo{
+    width: 10%;
+    height: 10%;
+  }
+}
+
+#adminLink {
+  display: none;
+}
+
