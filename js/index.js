@@ -7,25 +7,27 @@ if (juegos) {
   const article = document.getElementById("card");
 
   juegos.forEach((juego) => {
-    article.innerHTML += /* HTML */ `<article class="col-lg-3 col-md-4 row  ">
-      <div class="m-2">
-        <div class="card">
-          <img
-            src="${juego.imagen}"
-            class="card-img-top "
-            alt="${juego.titulo}"
-          />
-          <div class="card-body ">
-            <h5 class="card-title tamanioTitulo textoDetalle">${juego.titulo}</h5>
-            <a
-              href="../paginas/detalle.html?id=${juego.identificador}"
-              class="btn btn-primary botonCardIndex"
-              >Ver detalles</a
-            >
-          </div>
+    article.innerHTML += /* HTML */ `<article class="col-md-3">
+    <div class="card-sl">
+        <div class="card-image">
+            <img src="${juego.imagen}" class="card-img-top" alt="${juego.titulo}" />
         </div>
-      </div>
-    </article>`;
+        <div class="card-content">
+            <div class="card-heading">
+                ${juego.titulo}
+            </div>
+            <div class="card-text">
+                Descripción: ${juego.descripcion}
+            </div>
+            <div class="card-text">
+                Precio: ${juego.precio} Usd$
+            </div>
+            <a href="../paginas/detalle.html?id=${juego.identificador}" class="card-button"> Ver detalles</a>
+        </div>
+    </div>
+</article>
+
+`;
   });
 }
 
@@ -52,24 +54,24 @@ function buscarJuego(terminoBusqueda) {
   article.innerHTML = "";
 
   juegosFiltrados.forEach((juego) => {
-    article.innerHTML += `<article class="col-lg-4 col-md-4 row  ">
-      <div class="col-12 col-md-12 col-lg-12 m-2">
-        <div class="card h-100 ">
-          <img
-            src="${juego.imagen}"
-            class="card-img-top "
-            alt="${juego.titulo}"
-          />
-          <div class="card-body ">
-            <h5 class="card-title tamanioTitulo">${juego.titulo}</h5>
-            <a
-              href="./paginas/detalle.html?id=${juego.identificador}"
-              class="btn btn-primary botonCardIndex"
-              >Ver detalles</a
-            >
-          </div>
+    article.innerHTML += `<article class="col-md-3">
+    <div class="card-sl">
+        <div class="card-image">
+            <img src="${juego.imagen}" class="card-img-top" alt="${juego.titulo}" />
         </div>
-      </div>
-    </article>`;
+        <div class="card-content">
+            <div class="card-heading">
+                ${juego.titulo}
+            </div>
+            <div class="card-text">
+                Descripción: ${juego.descripcion}
+            </div>
+            <div class="card-text">
+                Precio: ${juego.precio} Usd$
+            </div>
+            <a href="../paginas/detalle.html?id=${juego.identificador}" class="card-button"> Ver detalles</a>
+        </div>
+    </div>
+</article>`;
   });
 }
