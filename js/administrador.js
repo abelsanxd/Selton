@@ -1,6 +1,7 @@
 import Juegos from "./classJuegos.js";
 
 const botonAgregarJuego = document.querySelector("#botonAgregarJuego");
+const botonEliminarJuego = document.querySelector("#botonEliminarJuego");
 const modalJuego = new bootstrap.Modal(document.getElementById("modalAgregar"));
 let crearJuego = true;
 const formularioJuego = document.querySelector("#formAgregar");
@@ -64,7 +65,6 @@ function guardarLocalStorage() {
 function limpiarFormulario() {
   formularioJuego.reset();
 }
-
 function cargaInicial() {
   if (juegos.length > 0) {
     juegos.map((juego) => dibujarFila(juego));
@@ -93,8 +93,9 @@ function dibujarFila(juego) {
         <i class="bi bi-pencil-square fs-4"></i>
       </button>
       <button
+        id="botonEliminarJuego"
         class="btn btn-danger m-1"
-        onclick="borrarjuego('${juego.identificador}')"
+        onclick="borrarJuego('${juego.identificador}')"
       >
         <i class="bi bi-x-square fs-4"></i>
       </button>
@@ -147,6 +148,37 @@ function editarJuego() {
   limpiarFormulario();
   modalJuego.hide();
 }
+
+window.borrarJuego = function (idJuego) {
+  Swal.fire({
+    title: "¿Seguro que quieres borrar este juego?",
+    text: "No puedes revertir este paso",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Borrar",
+    cancelButtonText: "Cancelar",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      const posicionJuego = juegos.findIndex(
+        (itemJuego) => itemJuego.identificador === idJuego
+      );
+      juegos.splice(posicionJuego, 1);
+      //actualizar el localstorage
+      guardarLocalStorage();
+      //actualizar la tabla
+      const tbody = document.querySelector("#tablajuegos");
+      tbody.removeChild(tbody.children[posicionJuego]);
+      Swal.fire({
+        title: "Juego eliminado",
+        text: `El juego fue eliminado correctamente`,
+        icon: "success",
+      });
+    }
+  });
+};
+
 
 botonAgregarJuego.addEventListener("click", mostrarModalJuego);
 formularioJuego.addEventListener("submit", administrarFormularioJuego);
